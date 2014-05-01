@@ -17,10 +17,18 @@ function randomNumber (max) {
   return Math.floor(Math.random() * max);
 }
 
+function randomColor () {
+  return new Color(randomNumber(255), randomNumber(255), randomNumber(255))
+}
+
 var colors = [
-  new Color(160, 60, 150),
-  new Color(50, 60, 160),
-  new Color(50, 160, 60)
+  randomColor(),
+  randomColor(),
+  randomColor(),
+  randomColor(),
+  randomColor(),
+  randomColor(),
+  randomColor()
 ];
 
 function drawGrid () {
