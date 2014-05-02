@@ -18,18 +18,14 @@ function randomNumber (max) {
 }
 
 function randomColor () {
-  return new Color(randomNumber(255), randomNumber(255), randomNumber(255))
+  return new Color(randomNumber(255), randomNumber(255), randomNumber(255));
 }
 
-var colors = [
-  randomColor(),
-  randomColor(),
-  randomColor(),
-  randomColor(),
-  randomColor(),
-  randomColor(),
-  randomColor()
-];
+var colors = [];
+var numberOfColors = 7;
+for (var i = 0; i < numberOfColors; i++) {
+  colors.push(randomColor());
+}
 
 function drawGrid () {
   // an array for each color
@@ -38,7 +34,7 @@ function drawGrid () {
   });
 
   function randomBucket () {
-    return buckets[randomNumber(buckets.length)];
+    return buckets[randomNumber(numberOfColors)];
   }
 
   var depth = 30;
